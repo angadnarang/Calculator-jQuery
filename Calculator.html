@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<style>
+    #outer{
+        margin: auto;
+        width: 76%;
+        padding: 10px;
+        border: solid;
+        border-color: tomato;
+        text-align: right;
+    }
+    table{
+        padding: 10px;
+        border: solid;
+        border-color: wheat;
+
+    }
+    td{
+        padding: 1px;
+    }
+    #btnequal{
+    
+    height: 100px;
+   
+    }
+    
+
+
+</style>
+    </head>
+    <body>
+    
+         <table>
+             <tr>
+                 <td class="a"colspan="4" ><div id="outer"><span id="span">0</span></div></td>
+             </tr>
+             <tr>
+                 <td><button id="btnadd">+</button></td>
+                 <td><button id="btnsub">-</button></td>
+                 <td><button id="btnmulti">x</button></td>
+                 <td><button id="btndivide">%</button></td>
+             </tr>
+             <tr>
+                <td><button id="btn7">7</button></td>
+                <td><button id="btn8">8</button></td>
+                <td><button id="btn9">9</button></td>
+                <td rowspan="4" align="center"><button id="btnequal">=</button></td> 
+             </tr>
+             <tr>
+                <td><button id="btn4">4</button></td>
+                <td><button id="btn5">5</button></td>
+                <td><button id="btn6">6</button></td>
+  
+             </tr>
+             <tr>
+                <td><button id="btn3">3</button></td>
+                <td><button id="btn2">2</button></td>
+                <td><button id="btn1">1</button></td>
+                
+             </tr>
+             <tr aria-rowspan="4"> <td><button id="btn0">0</button></td>
+                <td><button id="btndot">.</button></td>
+                <td><button id="btnc">C</button></td>
+                
+         </table>  
+ <script> 
+ $(document).ready(function(){
+    
+    $("#btn0").on('click', event =>{
+ a = $("#span").text();
+  if(a==0)
+  $("#span").text("0");
+  else
+  $("#span").append("0");
+    });
+$("#btn1").on('click', event =>{
+     a = $("#span").text();
+  if(a==0)
+  $("#span").text("1");
+  else 
+  $("#span").append("1");
+    });
+
+$("#btn2").on('click', event =>{
+     a = $("#span").text();
+if(a==0)
+    $("#span").text("2");
+else
+$("#span").append("2");
+});
+$("#btn3").on('click', event =>{
+     a = $("#span").text();
+if(a==0)
+    $("#span").text("3");
+else
+$("#span").append("3"); 
+});
+$("#btn4").on('click', event =>{
+     a = $("#span").text();
+if(a==0)
+    $("#span").text("4");
+else
+$("#span").append("4");
+});
+$("#btn5").on('click', event =>{
+    a = $("#span").text();
+if(a==0)
+    $("#span").text("5");
+else
+$("#span").append("5");
+});
+$("#btn6").on('click', event =>{
+     a = $("#span").text();
+if(a==0)
+    $("#span").text("6");
+else
+$("#span").append("6");
+});
+$("#btn7").on('click', event =>{
+    a = $("#span").text();
+if(a==0)
+    $("#span").text("7");
+else
+$("#span").append("7");
+});
+$("#btn8").on('click', event =>{
+     a = $("#span").text();
+if(a==0)
+    $("#span").text("8");
+else
+$("#span").append("8");
+});
+$("#btndot").on('click', event =>{
+    a = $("#span").text();
+    $("#span").append(".");
+});
+$("#btn9").on('click', event =>{
+   a = $("#span").text();
+if(a==0)
+    $("#span").text("9");
+else
+$("#span").append("9"); 
+});
+$("#btnc").click(function(){
+
+   a = $("#span").text("0");
+ });
+ 
+ $("#btnadd").click(function (){
+    a = $("#span").text();
+  $("#span").append("+");
+  
+ });
+ $("#btnsub").click(function (){
+  a = $("#span").text();
+    $("#span").append("-");
+
+ });
+ $("#btndivide").click(function (){
+  a = $("#span").text();
+    $("#span").append("/");
+
+ });
+ $("#btnmulti").click(function (){
+ var a = $("#span").text();
+    $("#span").append("*");
+
+ });
+ $("#btnequal").click(function (){
+var abc = eval(($("#span").text()));
+$("#span").text(abc);
+ });
+ });
+</script>
+    </body>
+</html>
